@@ -27,7 +27,7 @@ function buttonEnabled(enabled) {
 }
 
 // The public hub to connect to. This is running code from https://github.com/jonathanzufi/SignalRWebServer 
-const hub_endpoint = 'https://localhost:7060/chathub';
+const hub_endpoint = 'http://70.133.218.214:13953/chathub';
 
 const App = () => {
 
@@ -45,7 +45,7 @@ const App = () => {
     // messages in the console log which can help give a deeper understanding
     // of how SignalR works and what it's doing under the covers
     const connection = new HubConnectionBuilder()
-      .withUrl(hub_endpoint)
+    .withUrl(hub_endpoint)
       .configureLogging(LogLevel.Debug)
       .build();
 
